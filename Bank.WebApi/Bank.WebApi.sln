@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.WebApi", "Bank.WebApi\Bank.WebApi.csproj", "{AB04021B-63C2-4CF8-BF95-E9397DA8BCE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank.WebApi", "..\Bank.WebApi\Bank.WebApi.csproj", "{AB04021B-63C2-4CF8-BF95-E9397DA8BCE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApi.Library", "BankApi.Library\BankApi.Library.csproj", "{05CEDFFA-14B2-43B1-8E41-2709241665F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecurityNews.Web", "SecurityNews.Web\SecurityNews.Web.csproj", "{8D0C743D-2CE0-4BB7-BCC0-67E2C45B76C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankApi.Library", "..\BankApi.Library\BankApi.Library.csproj", "{05CEDFFA-14B2-43B1-8E41-2709241665F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{05CEDFFA-14B2-43B1-8E41-2709241665F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05CEDFFA-14B2-43B1-8E41-2709241665F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05CEDFFA-14B2-43B1-8E41-2709241665F6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D0C743D-2CE0-4BB7-BCC0-67E2C45B76C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D0C743D-2CE0-4BB7-BCC0-67E2C45B76C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D0C743D-2CE0-4BB7-BCC0-67E2C45B76C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D0C743D-2CE0-4BB7-BCC0-67E2C45B76C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

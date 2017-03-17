@@ -1,0 +1,51 @@
+﻿<div class="jumbotron">
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-md-12">
+            <h2>Credit card</h2>
+            <p>To order a journal subscription, please fill out the following form.</p>
+        </div>
+
+        <div class="col-md-12">
+            @using (Html.BeginForm("Subscribe", "Subscriptions", FormMethod.Post))
+            {
+                <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">Number</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" name="number" value="41111111111111" id="example-text-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-search-input" class="col-2 col-form-label">Date</label>
+                    <div class="col-10">
+                        <input class="form-control" type="search" name="date" value="12/20" id="example-search-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-url-input" class="col-2 col-form-label">CVV</label>
+                    <div class="col-10">
+                        <input class="form-control" type="text" name="cvv" value="123" id="example-url-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>Response</h2>
+        <pre id="result"></pre>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            app.init();
+        });
+    </script>
+}
