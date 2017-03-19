@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace BankApi.Library
+namespace BankApi.Library.Readers
 {
     internal class FileReader
     {

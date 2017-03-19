@@ -1,13 +1,22 @@
 ﻿using BankApi.Library.Models;
+using System;
 using System.Web.Http;
 
 namespace Bank.WebApi.Controllers
 {
     public class ProcessorController : ApiController
     {
+        private const long ValidCreditCardNumber = 4111111111111111;
         public PaymentResult Post([FromBody]CreditCard creditCard)
         {
-            return new PaymentResult { TransactionId = 1233344566, Message = "Success!!" };
+            return creditCard.Number == ValidCreditCardNumber
+                ? new PaymentResult { TransactionId = GetTransactionId(), Message = "Success!!" }
+                : new PaymentResult { Message = "Error!!" };
+        }
+
+        public int GetTransactionId()
+        {
+            return new Random().Next(0, 1233344566);
         }
     }
 }

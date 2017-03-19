@@ -1,18 +1,13 @@
-﻿using log4net;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Text;
+using BankApi.Library.Common.Logging;
 
 namespace BankApi.Library.MessageHandlers
 {
     public abstract class CryptographyMessageHandlerBase : DelegatingHandler
     {
-        protected static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly AsymmetricСryptographer asymmetricСryptographer;
-
-        public CryptographyMessageHandlerBase()
-        {
-            asymmetricСryptographer = new AsymmetricСryptographer();
-        }
+        private readonly AsymmetricСryptographer asymmetricСryptographer = new AsymmetricСryptographer();
+        protected Logger log { get; } = new Logger();
 
         protected StringContent EncryptContent(string content)
         {

@@ -69,14 +69,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppSettingReader.cs" />
+    <Compile Include="Common\Readers\AppSettingReader.cs" />
     <Compile Include="AsymmetricСryptographer.cs" />
     <Compile Include="BankHttpClient.cs" />
     <Compile Include="BankPaymentProcessor.cs" />
-    <Compile Include="FileReader.cs" />
+    <Compile Include="Common\Readers\FileReader.cs" />
+    <Compile Include="Common\Logging\Logger.cs" />
     <Compile Include="MessageHandlers\CryptographyMessageHandlerBase.cs" />
-    <Compile Include="MessageHandlers\DecryptMessageHandler.cs" />
-    <Compile Include="MessageHandlers\EncryptMessageHandler.cs" />
+    <Compile Include="MessageHandlers\ReceiverCryptographyMessageHandler.cs" />
+    <Compile Include="MessageHandlers\SenderCryptographyMessageHandler.cs" />
     <Compile Include="Models\CreditCard.cs" />
     <Compile Include="Models\PaymentResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

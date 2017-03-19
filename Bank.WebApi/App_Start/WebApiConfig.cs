@@ -9,7 +9,7 @@ namespace Bank.WebApi
         {
             log4net.Config.XmlConfigurator.Configure();
             // Web API configuration and services
-            config.MessageHandlers.Add(new DecryptMessageHandler());
+            config.MessageHandlers.Add(new ReceiverCryptographyMessageHandler());
             // Web API routes
             config.MapHttpAttributeRoutes();
 

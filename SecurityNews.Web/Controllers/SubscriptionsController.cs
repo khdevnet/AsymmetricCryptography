@@ -1,6 +1,5 @@
 ﻿using BankApi.Library;
 using BankApi.Library.Models;
-using log4net;
 using SecurityNews.Web.Models;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -10,11 +9,8 @@ namespace SecurityNews.Web.Controllers
 {
     public class SubscriptionsController : AsyncController
     {
-        private static readonly ILog Log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         public ActionResult Index()
         {
-            Log.Info("test");
             return View();
         }
 

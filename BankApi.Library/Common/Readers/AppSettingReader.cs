@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace BankApi.Library
+namespace BankApi.Library.Readers
 {
     public static class AppSettingReader
     {
