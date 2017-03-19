@@ -75,6 +75,7 @@
     <Compile Include="BankPaymentProcessor.cs" />
     <Compile Include="Common\Readers\FileReader.cs" />
     <Compile Include="Common\Logging\Logger.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="MessageHandlers\CryptographyMessageHandlerBase.cs" />
     <Compile Include="MessageHandlers\ReceiverCryptographyMessageHandler.cs" />
     <Compile Include="MessageHandlers\SenderCryptographyMessageHandler.cs" />
