@@ -1,9 +1,10 @@
-﻿using BankApi.Library;
-using BankApi.Library.Models;
-using SecurityNews.Web.Models;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+
+using BankApi.Library;
+using BankApi.Library.Models;
+using SecurityNews.Web.Models;
 
 namespace SecurityNews.Web.Controllers
 {
@@ -17,7 +18,6 @@ namespace SecurityNews.Web.Controllers
         [HttpPost]
         public async Task<JsonResult> Subscribe(CreditCardViewModel creditCardViewModel)
         {
-
             var paymentResult = await new BankPaymentProcessor()
                 .PayNowAsync(new CreditCard
                 {

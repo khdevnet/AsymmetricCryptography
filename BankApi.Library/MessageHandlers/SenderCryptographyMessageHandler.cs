@@ -12,11 +12,12 @@ namespace BankApi.Library.MessageHandlers
 
             log.Info("Request News Subscribe Web NormalContent: " + requestContent);
             request.Content = EncryptContent(requestContent);
+            var response = await base.SendAsync(request, cancellationToken);
+
             log.Info("Request News Subscribe Web EncryptedContent: " + request.Content.ReadAsStringAsync().Result);
 
             log.Info("=====================================");
 
-            var response = await base.SendAsync(request, cancellationToken);
 
             var responseContent = response.Content.ReadAsStringAsync().Result;
 

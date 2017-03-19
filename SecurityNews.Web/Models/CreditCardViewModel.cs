@@ -2,7 +2,7 @@
 {
     public class CreditCardViewModel
     {
-        public long Number { get; set; }
+        public string Number { get; set; }
 
         public string Date { get; set; }
 
