@@ -8,16 +8,17 @@ namespace Bank.WebApi
         public static void Register(HttpConfiguration config)
         {
             log4net.Config.XmlConfigurator.Configure();
+
             // Web API configuration and services
             config.MessageHandlers.Add(new ReceiverCryptographyMessageHandler());
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                defaults: new { id = RouteParameter.Optional });
         }
     }
 }

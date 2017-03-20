@@ -1,10 +1,10 @@
 ﻿using System.Configuration;
 
-namespace BankApi.Library.Readers
+namespace BankApi.Library.Common.Readers
 {
-    public static class AppSettingReader
+    public class AppSettingReader
     {
-        public static string GetSetting(string key)
+        public string GetSetting(string key)
         {
             return ConfigurationManager.AppSettings[key];
         }

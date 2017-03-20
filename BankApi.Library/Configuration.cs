@@ -1,24 +1,21 @@
-﻿using BankApi.Library.Readers;
+﻿using BankApi.Library.Common.Readers;
 
 namespace BankApi.Library
 {
     public class Configuration
     {
-        private readonly string encryptionKeysPath;
-        private readonly string decryptionKeysPath;
-        private string bankApiUrl;
-
         public Configuration()
         {
-            encryptionKeysPath = AppSettingReader.GetSetting("EncryptionKeysPath");
-            decryptionKeysPath = AppSettingReader.GetSetting("DecryptionKeysPath");
-            bankApiUrl = AppSettingReader.GetSetting("bankApiUrl");
+            var settingsReader = new AppSettingReader();
+            EncryptionKeysPath = settingsReader.GetSetting("EncryptionKeysPath");
+            DecryptionKeysPath = settingsReader.GetSetting("DecryptionKeysPath");
+            BankApiUrl = settingsReader.GetSetting("bankApiUrl");
         }
 
-        public string EncryptionKeysPath => encryptionKeysPath;
+        public string EncryptionKeysPath { get; }
 
-        public string DecryptionKeysPath => decryptionKeysPath;
+        public string DecryptionKeysPath { get; }
 
-        public string BankApiUrl => bankApiUrl;
+        public string BankApiUrl { get; }
     }
 }

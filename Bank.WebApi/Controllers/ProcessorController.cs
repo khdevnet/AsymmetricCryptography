@@ -1,6 +1,6 @@
-﻿using BankApi.Library.Models;
-using System;
+﻿using System;
 using System.Web.Http;
+using BankApi.Library.Models;
 
 namespace Bank.WebApi.Controllers
 {

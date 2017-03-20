@@ -7,17 +7,18 @@ namespace BankApi.Library.MessageHandlers
     public abstract class CryptographyMessageHandlerBase : DelegatingHandler
     {
         private readonly AsymmetricСryptographer asymmetricСryptographer = new AsymmetricСryptographer();
-        protected Logger log { get; } = new Logger();
+
+        protected Logger Log { get; } = new Logger();
 
         protected StringContent EncryptContent(string content)
         {
-            var encryptedContent = asymmetricСryptographer.Encrypt(content);
+            string encryptedContent = asymmetricСryptographer.Encrypt(content);
             return CreateJsonStringContent(encryptedContent);
         }
 
         protected StringContent DecryptContent(string content)
         {
-            var decryptedContent = asymmetricСryptographer.Decrypt(content);
+            string decryptedContent = asymmetricСryptographer.Decrypt(content);
             return CreateJsonStringContent(decryptedContent);
         }
 

@@ -1,7 +1,7 @@
-﻿using BankApi.Library.Readers;
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using BankApi.Library.Common.Readers;
 
 namespace BankApi.Library
 {
@@ -25,7 +25,7 @@ namespace BankApi.Library
 
         private RSACryptoServiceProvider CreateСryptographer(string keysFile)
         {
-            RSACryptoServiceProvider cryptographer = new RSACryptoServiceProvider();
+            var cryptographer = new RSACryptoServiceProvider();
             cryptographer.FromXmlString(new FileReader().Read(keysFile));
             return cryptographer;
         }
