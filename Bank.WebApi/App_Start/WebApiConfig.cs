@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using BankApi.Library.MessageHandlers;
+using log4net.Config;
 
 namespace Bank.WebApi
 {
@@ -7,7 +8,7 @@ namespace Bank.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            log4net.Config.XmlConfigurator.Configure();
+            XmlConfigurator.Configure();
 
             // Web API configuration and services
             config.MessageHandlers.Add(new ReceiverCryptographyMessageHandler());

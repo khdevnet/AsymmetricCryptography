@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using log4net.Config;
 
 namespace SecurityNews.Web
 {
@@ -9,7 +10,7 @@ namespace SecurityNews.Web
     {
         protected void Application_Start()
         {
-            log4net.Config.XmlConfigurator.Configure();
+            XmlConfigurator.Configure();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

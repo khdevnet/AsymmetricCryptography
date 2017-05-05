@@ -1,7 +1,6 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-
 using BankApi.Library;
 using BankApi.Library.Models;
 using SecurityNews.Web.Models;
